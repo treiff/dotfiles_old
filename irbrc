@@ -15,7 +15,4 @@ class Object
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
 
-  def find_ben
-    User.find_by_email 'ben@thoughtbot.com'
-  end
 end

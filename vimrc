@@ -29,6 +29,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wincent/Command-T'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'rust-lang/rust.vim'
+Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'derekwyatt/vim-scala'
 
 " nelstrom's plugin depends on kana's
 Plugin 'kana/vim-textobj-user'
@@ -359,9 +364,6 @@ let g:CommandTMatchWindowAtTop=1
 " situations.
 set timeoutlen=500
 
-" Don't go past 100 chars on levelup:
-autocmd BufNewFile,BufRead /Users/ben/code/levelup/*.rb set colorcolumn=100
-
 " Remove trailing whitespace on save for ruby files.
 au BufWritePre *.rb :%s/\s\+$//e
 
@@ -406,6 +408,13 @@ hi MatchParen cterm=none ctermbg=black ctermfg=yellow
 " By default, vim thinks .md is Modula-2. 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" Set spellcheck and textwidth for git commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" ========================================================================
+" PHP stuff
+" ========================================================================
+autocmd Filetype php setlocal shiftwidth=8  tabstop=8 softtabstop=8 noexpandtab
 " ========================================================================
 " End of things set by me.
 " ========================================================================
