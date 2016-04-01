@@ -8,3 +8,4 @@ fi
 
 alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias d='cd ~/.dotfiles'
+alias neprofile='cd ~/Documents/sites/neprofile'

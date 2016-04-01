@@ -20,7 +20,8 @@ stty start undef
 stty stop undef
 
 # RVM
-[[ -s "/Users/trevorreiff/.rvm/scripts/rvm" ]] && source "/Users/trevorreiff/.rvm/scripts/rvm"
+# insert username here
+[[ -s "/Users/trevor/.rvm/scripts/rvm" ]] && source "/Users/trevor/.rvm/scripts/rvm"
 
 # Colors for -ls command
 export CLICOLOR=1
@@ -32,9 +33,19 @@ source $HOME/.dotfiles/zsh/functions
 source $HOME/.dotfiles/zsh/prompt
 source $HOME/.dotfiles/zsh/z
 
-export PATH=$PATH:bin:~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
+# Bundler editor
+export EDITOR=vim
+
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH=$PATH:bin:~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:$NPM_PACKAGES/bin
+unset MANPATH
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Mysql
 MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+# added by travis gem
+[ -f /Users/trevor/.travis/travis.sh ] && source /Users/trevor/.travis/travis.sh
