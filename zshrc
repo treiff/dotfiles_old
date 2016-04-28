@@ -23,13 +23,10 @@ stty stop undef
 # insert username here
 [[ -s "/Users/trevor/.rvm/scripts/rvm" ]] && source "/Users/trevor/.rvm/scripts/rvm"
 
-# Colors for -ls command
-export CLICOLOR=1
-export LS_COLORS="di=1;34;41:ln=1;35;46:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
-
 # Sourcing of other files
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
+source $HOME/.dotfiles/zsh/ls_colors
 source $HOME/.dotfiles/zsh/prompt
 source $HOME/.dotfiles/zsh/z
 
@@ -46,6 +43,9 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+export SUPPLEMENT_ONE=6DC339A5C6CBD94643C9752F97C546DC
+export SUPPLEMENT_TWO=9E1239DD2CC7B5DE
 
 # added by travis gem
 [ -f /Users/trevor/.travis/travis.sh ] && source /Users/trevor/.travis/travis.sh
