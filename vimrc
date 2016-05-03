@@ -28,6 +28,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wincent/Command-T'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'fatih/vim-go'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
