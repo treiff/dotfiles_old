@@ -44,6 +44,9 @@ MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
+# Go
+export GOPATH=$HOME/go
+
 # Seczetta neprofile app yaml encryption
 export SUPPLEMENT_ONE=6DC339A5C6CBD94643C9752F97C546DC
 export SUPPLEMENT_TWO=9E1239DD2CC7B5DE
