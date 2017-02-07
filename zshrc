@@ -53,3 +53,5 @@ export SUPPLEMENT_TWO=9E1239DD2CC7B5DE
 
 # added by travis gem
 [ -f /Users/trevor/.travis/travis.sh ] && source /Users/trevor/.travis/travis.sh
+
+#some text
